@@ -1,0 +1,135 @@
+#roundedCorner {
+  background-color: #73ad21;
+  height: 200px;
+  width: 200px;
+  border-radius: 15px 50px;
+}
+#css-gradient {
+  height: 200px;
+  width: 400px;
+  background-image: linear-gradient(to right, black, white);
+}
+#css-text-shadow {
+  text-shadow: 2px 2px grey;
+}
+#css-box-shadow {
+  height: 200px;
+  width: 250px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+}
+.cliped {
+  white-space: nowrap;
+  width: 100px;
+  border: 1px #000000 solid;
+  overflow: hidden;
+  text-overflow: clip;
+}
+.ellipses {
+  white-space: nowrap;
+  width: 50px;
+  border: 1px #000000 solid;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.trans,
+.scal,
+.rotat,
+.ske {
+  width: 100px;
+  height: 100px;
+  background-color: #73ad21;
+}
+.trans:hover {
+  transform: translate(20px, 10px);
+}
+.scal:hover {
+  transform: scale(2, 3);
+}
+.rotat:hover {
+  transform: rotate(20deg);
+}
+.ske:hover {
+  transform: skewX(20deg);
+}
+.transit {
+  width: 100px;
+  height: 100px;
+  background-color: #73ad21;
+  transition: width 1s;
+  transition-delay: 3s;
+}
+.transit:hover {
+  width: 200px;
+}
+
+#anim1 {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  animation-name: example;
+  animation-duration: 4s;
+}
+#anim2 {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  background-color: red;
+  animation-name: example2;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+@keyframes example2 {
+  0% {
+    background-color: red;
+    left: 0px;
+    top: 0px;
+  }
+  25% {
+    background-color: yellow;
+    left: 200px;
+    top: 0px;
+  }
+  50% {
+    background-color: blue;
+    left: 200px;
+    top: 200px;
+  }
+  75% {
+    background-color: green;
+    left: 0px;
+    top: 200px;
+  }
+  100% {
+    background-color: red;
+    left: 0px;
+    top: 0px;
+  }
+}
+@keyframes example {
+  from {
+    background-color: red;
+  }
+  to {
+    background-color: yellow;
+  }
+}
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px #000000 dotted;
+}
+.tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #000000;
+  color: #ffffff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+}
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
