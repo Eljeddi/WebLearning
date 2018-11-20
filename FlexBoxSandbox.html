@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>flexBox</title>
+    <style>
+      h1 {
+        text-align: center;
+      }
+      .flex-container1 {
+        display: flex;
+        /*flex-wrap: wrap;
+        flex-direction: column;*/
+      }
+      .c1 {
+        border: 1px solid grey;
+        height: 50px;
+        width: 33.33%;
+      }
+
+      .flex-container2 {
+        height: 300px;
+        border: 1px solid black;
+        display: flex;
+        /*justify-content: center;// flex-start, flex-end, space-between*/
+        justify-content: space-around;
+        align-items: center; /*flex-start, flex-end, stretch, basealign */
+      }
+      .c2 {
+        border: 1px solid grey;
+        height: 50px;
+        flex-basis: 20%;
+      }
+      .flex-container3 {
+        display: flex;
+        justify-content: space-around;
+        align-items: stretch;
+      }
+      .c3 {
+        border: 1px solid grey;
+        height: 50px;
+        flex-basis: 25%;
+      }
+      .element1 {
+        order: 3;
+        flex-grow: 2;
+      }
+      .element2 {
+        flex-shrink: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>FLEX WRAP AND DIRECTION</h1>
+    <div class="flex-container1">
+      <div class="c1">1</div>
+      <div class="c1">2</div>
+      <div class="c1">3</div>
+    </div>
+    <h1>VERTICAL AND HORIZONTAL ALIGNMENT</h1>
+    <div class="flex-container2">
+      <div class="c2">1</div>
+      <div class="c2">2</div>
+      <div class="c2">3</div>
+    </div>
+    <h1>FLEX CHILD PROPERTY</h1>
+    <div class="flex-container3">
+      <div class="c3 element1">
+        1 (takes 50% of the space cuz flex-grow =2 while flex-basis=25%)
+      </div>
+      <div class="c3 element2">2 (do not shrink when resizing the window)</div>
+      <div class="c3 element3">3</div>
+    </div>
+    <br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br />
+    <br /><br />
+  </body>
+</html>
