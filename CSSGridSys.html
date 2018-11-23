@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>css grid</title>
+  </head>
+  <style>
+    h1 {
+      text-align: center;
+    }
+
+    /************very important ref**********/
+
+    .wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 1em; /*also grid-column-gap and grid-row-gap*/
+
+      /*fixed row height with
+      grid-auto-rows: 5em;*/
+      /*better so the content will not be overlapping when a div has so much content then the other it will be stretched like item 7*/
+      grid-auto-rows: minmax(
+        5rem,
+        auto
+      ); /*{ could use also grid-template-rows: }*/
+    }
+
+    .wrapper > div {
+      background-color: grey;
+    }
+    /*item 1 start at line 1 to line 3*/
+    .item1 {
+      grid-column: 1/3;
+    }
+    /*item 4 start in row line 2 ends at line row 4*/
+    .item4 {
+      grid-row: 2/4;
+    }
+
+    /***********Other property**********/
+    .wrapper2 {
+      display: grid;
+      grid-template-columns: 50px 50px 50px 50px;
+      grid-gap: 1em;
+      padding: 20px;
+      background-color: aquamarine;
+      justify-content: space-around;
+      /*also center, space-between ,space-around ,start, end  and same for vertical align with the "align-content property";*/
+    }
+    .item {
+      background-color: grey;
+    }
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-rows: 5em 5em 5em 5em;
+      grid-gap: 1em;
+    }
+    .element {
+      background-color: grey;
+      text-align: center;
+    }
+    .e1 {
+      grid-column: 1 / span 4;
+    }
+    /*******************end ref*******************/
+  </style>
+  <body>
+    <h1>GRID LAYOUT SYS</h1>
+    <div class="wrapper">
+      <div class="item1">Element1</div>
+      <div class="item2">Element2</div>
+      <div class="item3">Element3</div>
+      <div class="item4">Element4</div>
+      <div class="item5">Element5</div>
+      <div class="item6">Element6</div>
+      <div class="item7">
+        Element7 Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque
+        sequi repellat voluptate tenetur laborum illum dicta aspernatur ipsum
+        neque, odio quo officia natus modi explicabo nobis excepturi, quis ab
+        aperiam. Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+        Facere quis beatae dicta vitae fugiat. Repellat cum dolorem repudiandae
+        nostrum a non, fuga ea eveniet recusandae quasi eum facilis cupiditate
+        numquam?
+      </div>
+      <div class="item8">Element8</div>
+      <div class="item9">Element9</div>
+    </div>
+
+    <h1>alignment property</h1>
+    <div class="wrapper2">
+      <div class="item">Lorem ipsum dolor sit</div>
+      <div class="item">Lorem ipsum dolor sit.</div>
+      <div class="item">Lorem ipsum dolor sit.</div>
+      <div class="item">Lorem ipsum dolor sit.</div>
+    </div>
+    <h1>GRID Item</h1>
+    <div class="container">
+      <div class="element e1">Lorem, ipsum.0</div>
+      <div class="element">Lorem, ipsum. 1</div>
+      <div class="element">Lorem, ipsum.2</div>
+      <div class="element">Lorem, ipsum.3</div>
+      <div class="element">Lorem, ipsum.4</div>
+      <div class="element">Lorem, ipsum.5</div>
+      <div class="element">Lorem, ipsum.6</div>
+      <div class="element">Lorem, ipsum.7</div>
+      <div class="element">Lorem, ipsum.8</div>
+      <div class="element">Lorem, ipsum.9</div>
+      <div class="element">Lorem, ipsum.10</div>
+      <div class="element">Lorem, ipsum.11</div>
+      <div class="element">Lorem, ipsum.12</div>
+      <div class="element">Lorem, ipsum.13</div>
+      <div class="element">Lorem, ipsum.14</div>
+      <div class="element">Lorem, ipsum.15</div>
+    </div>
+
+    <br /><br /><br /><br /><br /><br />
+  </body>
+</html>
