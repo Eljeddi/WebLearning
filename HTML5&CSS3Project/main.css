@@ -1,0 +1,75 @@
+body {
+  margin: 0;
+}
+
+nav a {
+  text-decoration: none;
+}
+nav {
+  display: flex;
+  justify-content: space-around;
+  background-color: black;
+  align-items: baseline;
+}
+.band {
+  flex-grow: 5;
+  font-size: 2em;
+}
+nav a {
+  color: #ffffff;
+  margin: 20px;
+  flex-basis: 16, 66%;
+  flex-grow: 1;
+}
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  background: url(desk.jpg) no-repeat center fixed;
+  background-size: cover;
+  color: #ffffff;
+}
+header p {
+  padding: 0 200px;
+  text-align: center;
+}
+section {
+  display: flex;
+  justify-content: space-around;
+}
+section div {
+  text-align: center;
+  padding: 40px;
+}
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url(city.jpg) no-repeat center fixed;
+  background-size: cover;
+  color: #ffffff;
+  padding: 100px 0;
+}
+input,
+textarea {
+  width: 50%;
+  margin-bottom: 30px;
+}
+button {
+  width: 5em;
+}
+@media screen and (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+  section {
+    flex-direction: column;
+  }
+  header p {
+    padding: 0 20px;
+  }
+}
